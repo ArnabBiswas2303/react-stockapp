@@ -33,9 +33,13 @@ export default function App() {
         onBuy={handleBuySell.bind(this, "buy")}
         onSell={handleBuySell.bind(this, "sell")}
       />
-      <OrderBookList list={buyList} />
-      <hr style={{ width: "40vw" }} />
-      <OrderBookList list={sellList} />
+      <div className="BuyList">
+        <OrderBookList list={buyList} />
+      </div>
+      <hr />
+      <div className="SellList">
+        <OrderBookList list={sellList} />
+      </div>
     </div>
   );
 }
